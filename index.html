@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Streem (by Yukihiro Matsumoto) by christopherdumas</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Streem (by Yukihiro Matsumoto)</h1>
+        <p>A prototype of stream based programming language</p>
+
+        <p class="view"><a href="https://github.com/christopherdumas/streem">View the Project on GitHub <small>christopherdumas/streem</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/christopherdumas/streem/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/christopherdumas/streem/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/christopherdumas/streem">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="streem---stream-based-concurrent-scripting-language" class="anchor" href="#streem---stream-based-concurrent-scripting-language" aria-hidden="true"><span class="octicon octicon-link"></span></a>Streem - stream based concurrent scripting language</h1>
+
+<p>Streem is a concurrent scripting language based on a programming model
+similar to shell, with influences from Ruby, Erlang and other
+functional programming languages.</p>
+
+<p>In Streem, a simple <code>cat</code> program looks like this:</p>
+
+<pre><code>STDIN | STDOUT
+</code></pre>
+
+<p>And a simple FizzBuzz will look like this:</p>
+
+<pre><code>seq(100) | {|x|
+  if x % 15 == 0 {
+    "FizzBuzz"
+  }
+  else if x % 3 == 0 {
+    "Fizz"
+  }
+  else if x % 5 == 0 {
+    "Buzz"
+  }
+  else {
+    x
+  }
+} | STDOUT
+</code></pre>
+
+<h1>
+<a id="note" class="anchor" href="#note" aria-hidden="true"><span class="octicon octicon-link"></span></a>Note</h1>
+
+<p>Streem is still in the design stage. It's not working yet.  Stay tuned.</p>
+
+<h1>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h1>
+
+<ul>
+<li>bison</li>
+<li>flex</li>
+<li>gcc / clang</li>
+</ul>
+
+<h1>
+<a id="how-to-compile" class="anchor" href="#how-to-compile" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to compile</h1>
+
+<pre><code>cd src
+make
+</code></pre>
+
+<h1>
+<a id="how-to-contribute" class="anchor" href="#how-to-contribute" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to contribute</h1>
+
+<p>Send a pull request to <a href="http://github.com/matz/streem">http://github.com/matz/streem</a>.  We consider
+you have granted non-exclusive right to your contributed code under
+MIT license.  Use <a href="http://github.com/matz/streem/issues">http://github.com/matz/streem/issues</a> for
+discussion.</p>
+
+<h1>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h1>
+
+<p>Streem is distributed under MIT license.</p>
+
+<p>Copyright (c) 2015 Yukihiro Matsumoto</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/christopherdumas">christopherdumas</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
