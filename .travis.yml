@@ -1,0 +1,10 @@
+language: c
+compiler:
+  - clang
+  - gcc
+
+install:
+  - sudo pip install cram
+script:
+  - make -C src
+  - cram tests/*.t -E
